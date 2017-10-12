@@ -14,6 +14,11 @@
 		870DCA571F8F50AB00E88FA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870DCA561F8F50AB00E88FA1 /* Assets.xcassets */; };
 		870DCA5A1F8F50AB00E88FA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870DCA581F8F50AB00E88FA1 /* LaunchScreen.storyboard */; };
 		870DCA621F8F53FC00E88FA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 870DCA611F8F53F700E88FA1 /* GoogleService-Info.plist */; };
+		870DCA691F8F5BFA00E88FA1 /* Costants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA681F8F5BFA00E88FA1 /* Costants.swift */; };
+		870DCA6E1F8F5C1B00E88FA1 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA6A1F8F5C1A00E88FA1 /* RoundButton.swift */; };
+		870DCA6F1F8F5C1B00E88FA1 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA6B1F8F5C1A00E88FA1 /* FancyField.swift */; };
+		870DCA701F8F5C1B00E88FA1 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA6C1F8F5C1A00E88FA1 /* FancyButton.swift */; };
+		870DCA711F8F5C1B00E88FA1 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA6D1F8F5C1A00E88FA1 /* FancyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,16 @@
 		870DCA591F8F50AB00E88FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		870DCA5B1F8F50AB00E88FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		870DCA611F8F53F700E88FA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		870DCA681F8F5BFA00E88FA1 /* Costants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Costants.swift; sourceTree = "<group>"; };
+		870DCA6A1F8F5C1A00E88FA1 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		870DCA6B1F8F5C1A00E88FA1 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		870DCA6C1F8F5C1A00E88FA1 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		870DCA6D1F8F5C1A00E88FA1 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		8732FF1E1F8F68B000E87CA9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		8732FF1F1F8F68B100E87CA9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		8732FF201F8F68B100E87CA9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		8732FF211F8F68B200E87CA9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		87B9BB571F8F908D0056EACD /* Social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Social.entitlements; sourceTree = "<group>"; };
 		8D6216796BC5922C1BD36031 /* Pods-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.debug.xcconfig"; sourceTree = "<group>"; };
 		D34ADD2410FFB13E993BF3A0 /* Pods_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +78,8 @@
 		870DCA4E1F8F50AB00E88FA1 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				87B9BB571F8F908D0056EACD /* Social.entitlements */,
+				870DCA671F8F5BD700E88FA1 /* Util */,
 				870DCA631F8F56CF00E88FA1 /* Model */,
 				870DCA641F8F56D400E88FA1 /* View */,
 				870DCA651F8F56D900E88FA1 /* Controller */,
@@ -86,6 +103,10 @@
 		870DCA641F8F56D400E88FA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				870DCA6C1F8F5C1A00E88FA1 /* FancyButton.swift */,
+				870DCA6B1F8F5C1A00E88FA1 /* FancyField.swift */,
+				870DCA6D1F8F5C1A00E88FA1 /* FancyView.swift */,
+				870DCA6A1F8F5C1A00E88FA1 /* RoundButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,9 +119,21 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		870DCA671F8F5BD700E88FA1 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				870DCA681F8F5BFA00E88FA1 /* Costants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		882681E2EF3C3E6D41CE62DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8732FF201F8F68B100E87CA9 /* Bolts.framework */,
+				8732FF1F1F8F68B100E87CA9 /* FBSDKCoreKit.framework */,
+				8732FF1E1F8F68B000E87CA9 /* FBSDKLoginKit.framework */,
+				8732FF211F8F68B200E87CA9 /* FBSDKShareKit.framework */,
 				D34ADD2410FFB13E993BF3A0 /* Pods_Social.framework */,
 			);
 			name = Frameworks;
@@ -151,6 +184,11 @@
 					870DCA4B1F8F50AB00E88FA1 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -209,6 +247,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Social/Pods-Social-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -216,6 +257,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -251,7 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870DCA6E1F8F5C1B00E88FA1 /* RoundButton.swift in Sources */,
 				870DCA521F8F50AB00E88FA1 /* SingInVC.swift in Sources */,
+				870DCA6F1F8F5C1B00E88FA1 /* FancyField.swift in Sources */,
+				870DCA701F8F5C1B00E88FA1 /* FancyButton.swift in Sources */,
+				870DCA691F8F5BFA00E88FA1 /* Costants.swift in Sources */,
+				870DCA711F8F5C1B00E88FA1 /* FancyView.swift in Sources */,
 				870DCA501F8F50AB00E88FA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,8 +439,22 @@
 			baseConfigurationReference = 8D6216796BC5922C1BD36031 /* Pods-Social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Social/Social.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5H4A368LZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/leveldb-library\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseStorage/Frameworks\"",
+				);
 				INFOPLIST_FILE = Social/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mno.social.social;
@@ -406,8 +469,22 @@
 			baseConfigurationReference = 0E154DD816226A93293508BE /* Pods-Social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Social/Social.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5H4A368LZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/leveldb-library\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseDatabase/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseStorage/Frameworks\"",
+				);
 				INFOPLIST_FILE = Social/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mno.social.social;
