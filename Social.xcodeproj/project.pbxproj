@@ -19,6 +19,10 @@
 		870DCA6F1F8F5C1B00E88FA1 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA6B1F8F5C1A00E88FA1 /* FancyField.swift */; };
 		870DCA701F8F5C1B00E88FA1 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA6C1F8F5C1A00E88FA1 /* FancyButton.swift */; };
 		870DCA711F8F5C1B00E88FA1 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DCA6D1F8F5C1A00E88FA1 /* FancyView.swift */; };
+		87255F061F90AC8800521511 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87255F051F90AC8800521511 /* CircleView.swift */; };
+		87255F081F90BB2600521511 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87255F071F90BB2600521511 /* PostCell.swift */; };
+		87255F0B1F90D7AF00521511 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87255F0A1F90D7AF00521511 /* DataService.swift */; };
+		87B9BB591F8FA21F0056EACD /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9BB581F8FA21F0056EACD /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,11 +40,15 @@
 		870DCA6B1F8F5C1A00E88FA1 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		870DCA6C1F8F5C1A00E88FA1 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		870DCA6D1F8F5C1A00E88FA1 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		87255F051F90AC8800521511 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		87255F071F90BB2600521511 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		87255F0A1F90D7AF00521511 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		8732FF1E1F8F68B000E87CA9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8732FF1F1F8F68B100E87CA9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8732FF201F8F68B100E87CA9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8732FF211F8F68B200E87CA9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		87B9BB571F8F908D0056EACD /* Social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Social.entitlements; sourceTree = "<group>"; };
+		87B9BB581F8FA21F0056EACD /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		8D6216796BC5922C1BD36031 /* Pods-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.debug.xcconfig"; sourceTree = "<group>"; };
 		D34ADD2410FFB13E993BF3A0 /* Pods_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +86,7 @@
 		870DCA4E1F8F50AB00E88FA1 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				87255F091F90D79400521511 /* Services */,
 				87B9BB571F8F908D0056EACD /* Social.entitlements */,
 				870DCA671F8F5BD700E88FA1 /* Util */,
 				870DCA631F8F56CF00E88FA1 /* Model */,
@@ -107,6 +116,8 @@
 				870DCA6B1F8F5C1A00E88FA1 /* FancyField.swift */,
 				870DCA6D1F8F5C1A00E88FA1 /* FancyView.swift */,
 				870DCA6A1F8F5C1A00E88FA1 /* RoundButton.swift */,
+				87255F051F90AC8800521511 /* CircleView.swift */,
+				87255F071F90BB2600521511 /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				870DCA511F8F50AB00E88FA1 /* SingInVC.swift */,
+				87B9BB581F8FA21F0056EACD /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +137,14 @@
 				870DCA681F8F5BFA00E88FA1 /* Costants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		87255F091F90D79400521511 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				87255F0A1F90D7AF00521511 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		882681E2EF3C3E6D41CE62DB /* Frameworks */ = {
@@ -252,6 +272,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -262,6 +283,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -295,13 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87255F061F90AC8800521511 /* CircleView.swift in Sources */,
 				870DCA6E1F8F5C1B00E88FA1 /* RoundButton.swift in Sources */,
 				870DCA521F8F50AB00E88FA1 /* SingInVC.swift in Sources */,
 				870DCA6F1F8F5C1B00E88FA1 /* FancyField.swift in Sources */,
 				870DCA701F8F5C1B00E88FA1 /* FancyButton.swift in Sources */,
+				87255F0B1F90D7AF00521511 /* DataService.swift in Sources */,
+				87B9BB591F8FA21F0056EACD /* FeedVC.swift in Sources */,
 				870DCA691F8F5BFA00E88FA1 /* Costants.swift in Sources */,
 				870DCA711F8F5C1B00E88FA1 /* FancyView.swift in Sources */,
 				870DCA501F8F50AB00E88FA1 /* AppDelegate.swift in Sources */,
+				87255F081F90BB2600521511 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

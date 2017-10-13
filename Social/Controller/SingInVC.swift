@@ -10,18 +10,26 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SingInVC: UIViewController {
 
+    @IBOutlet weak var emailField: FancyField!
+    @IBOutlet weak var passwordField: FancyField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+   
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
         
@@ -34,7 +42,7 @@ class SingInVC: UIViewController {
             } else if result?.isCancelled == true {
                 print("Pec: User cancelled Facebook authentication")
             } else {
-                print("JESS: Successfully authenticated with Facebook")
+                print("Pec: Successfully authenticated with Facebook")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
             }
@@ -44,18 +52,86 @@ class SingInVC: UIViewController {
     func firebaseAuth(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("JESS: Unable to authenticate with Firebase - \(String(describing: error))")
+                print("Pec: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
-                print("JESS: Successfully authenticated with Firebase")
-//                if let user = user {
-//                    let userData = ["provider": credential.provider]
+                print("Pec: Successfully authenticated with Firebase")
+                if let user = user {
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
+                   
 //                    self.completeSignIn(id: user.uid, userData: userData)
-//                }
+                }
             }
         })
     }
-    @IBAction func presed(_ sender: Any) {
-        print("Pressed")
+    
+    @IBAction func singIntapped(_ sender: Any) {
+        
+        if let email = emailField.text, let pwd = passwordField.text {
+             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("Pec: Email user Authenticated with Firebase")
+                    if let user = user {
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
+                    }
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("Pec: Unable to authenticated with Firebase usig Email")
+                        } else {
+                            print("Pec: Successfully authenticated with Firebase")
+                            if let user = user {
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                            }
+                        }
+                    })
+                }
+            })
+        }
+    }
+    
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataServices.ds.createFirebaseDBUser(uid: id, userData: userData)
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+//        let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
+        print("JESS: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
